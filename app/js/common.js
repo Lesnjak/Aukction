@@ -1,99 +1,28 @@
 $('document').ready(function () {
     var $set = $('.tabs-box a');
-$(".tabs-box a").click(function () {
+$(".tabs-box a").click(function (e) {
+    e.preventDefault();
     $(".tabs-box a").removeClass("active-tab");
     $(this).addClass("active-tab");
     var n=$set.index(this);
-    $(".text-center .item-box").removeClass("active-box");
-$(".text-center .item-box").eq(n).addClass("active-box");
-    return false
-})
-
-
-    ///////////////////////////////////////////////////////////////////////////////////////////////////
-    $('.big').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        fade: true,
-        speed: 2000,
-        asNavFor: '.small',
-        autoplay: true,
-        autoplaySpeed: 4000,
-        pauseOnFocus:false,
-
-
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-
-                }
-            },
-            {
-                breakpoint: 1062,
-                settings: {
-
-
-                }
-            },
-            {
-                breakpoint: 768,
-                settings: {
-
-                }
-            }
-
-        ]
-    });
-    var slideToSow = 6;
-if ($('header').height()< 860){
-    slideToSow = 5;
-}
-if($('header').height()< 740){
-    slideToSow = 4;
-}
-if($('header').height()< 640){
-    slideToSow = 3;
-}
-
-
-    $('.small').slick({
-        slidesToShow: slideToSow,
-        slidesToScroll: true,
-        asNavFor: '.big',
-        dots: false,
-        prevArrow:'<span class="next"></span>',
-        nextArrow:'<span class="prev"></span>',
-        arrows: true,
-        vertical:true,
-        focusOnSelect: true,
-        responsive: [
-            {
-                breakpoint: 1200,
-                settings: {
-                    slidesToShow:3
-                }
-            }
-
-
-        ]
-    });
-    $('.video-slider').slick({
-        slidesToShow: 3,
-        dots: false,
+    $(".slide-shoose .slider").removeClass("active-box");
+$(".slide-shoose .slider").eq(n).addClass("active-box");
+    $('.active-box').slick({
+        slidesToShow: 2,
+        dots: true,
         prevArrow:'<span class="next1"></span>',
         nextArrow:'<span class="prev1"></span>',
         responsive: [
             {
-                breakpoint: 1200,
+                breakpoint: 1400,
                 settings: {
                     slidesToShow:2
                 }
             },
             {
-                breakpoint: 993,
+                breakpoint: 1200,
                 settings: {
-                    slidesToShow:2
+                    slidesToShow:1
                 }
             },
             {
@@ -106,6 +35,52 @@ if($('header').height()< 640){
 
         ]
     });
+
+})
+    ////////////////////button//////////////////////
+    $('.but').on('click', function(){
+        if(!$('#js_menu_button').hasClass('on_menu')){
+            $('#js_menu_button').addClass('on_menu');
+        }else{
+            $('#js_menu_button').removeClass('on_menu');
+        }
+        $('header .menu-box .menu-item').slideToggle('slow');
+        return false;
+    });
+
+
+
+
+
+    $('.active-box').slick({
+        slidesToShow: 2,
+        dots: true,
+        prevArrow:'<span class="next1"></span>',
+        nextArrow:'<span class="prev1"></span>',
+        responsive: [
+            {
+                breakpoint: 1400,
+                settings: {
+                    slidesToShow:2
+                }
+            },
+            {
+                breakpoint: 1200,
+                settings: {
+                    slidesToShow:1
+                }
+            },
+            {
+                breakpoint: 768,
+                settings: {
+                    slidesToShow:1
+                }
+            }
+
+
+        ]
+    });
+
     ////////////////////////////////////////
 
 
@@ -140,6 +115,10 @@ if($('header').height()< 640){
         $(".but-top").click(function () {
             $('html, body').animate({scrollTop:0}, 1000);
         })
+    $(".menu-item a").click(function () {
+        var hr = $(this).attr("href");
+        $('html, body').animate({scrollTop:$(hr).position().top}, 1000);
+    })
 
 
     //////////////////////////////////////////////////
