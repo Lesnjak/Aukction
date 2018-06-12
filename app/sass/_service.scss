@@ -7,7 +7,7 @@
     display: grid;
     //grid-template-columns: 300px 360px 360px 1fr;
     //grid-template-rows: 1fr 1fr 1fr 1fr;
-    grid-template-columns: minmax(500px, 773px) minmax(300px, 515px);
+    grid-template-columns: minmax(773px, 773px) minmax(300px, 515px);
 
     grid-template-areas: "big mid mid "
                         "big small small";
@@ -92,6 +92,15 @@ P{
 
       }
     }
+  }
+}
+@media (max-width: 1300px) {
+  .about .about-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "big mid"
+                         "big small";
+    border: 1px solid #c7c7c7;
   }
 }
 @media (max-width: 1200px) {

@@ -7,7 +7,16 @@
     margin-bottom: 10px;
   }
   .logo-box {
-
+ a{
+   color: #231e1e;
+   font-family: Gilroy;
+   font-size: 16px;
+   font-weight: 300;
+   transition: 0.3s;
+   &:hover{
+     text-shadow: 0 0 5px #000;
+   }
+ }
     .logo {
 
       img {
@@ -32,11 +41,14 @@ justify-content: center;
     .inner-suare {
 
       .footer-p {
-
+        margin-bottom: 30px;
       }
 
       .tree-box {
         max-width: 230px;
+        &:nth-child(odd){
+          margin-bottom: 50px;
+        }
         .im-box {
 
           img {

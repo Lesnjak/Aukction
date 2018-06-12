@@ -52,15 +52,16 @@ h6{
 
 
 .button{
-  height: 37px;
+  height: 40px;
   border: 1px solid #231e1e;
   text-align: center;
   transition: 0.3s;
+  font-size: 18px;
   color: #fff;
+  line-height: 37px;
   width: 225px;
   font-family: Gilroy;
   font-weight: 700;
-  padding: 6px 0;
   display: inline-block;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   border-radius: 5px;

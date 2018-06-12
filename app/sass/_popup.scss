@@ -54,7 +54,7 @@
     }
     .inner-pop{
       box-shadow: 0 0 25px rgba(0, 0, 0, 0.28);
-      border-radius: 10px;
+      //border-radius: 10px;
       background-color: #ffffff;
       padding: 100px 50px;
       p{
@@ -127,6 +127,11 @@
   }
   .tho{
     max-width: 400px;
+  }
+}
+.thank-you-video{
+  .thank-you-window{
+    max-width: 560px;
   }
 }
 

@@ -198,11 +198,15 @@ $(".slide-shoose .slider").eq(n).addClass("active-box");
     });
     $('.button-crest').click(function () {
         $('.thank-you').hide();
+        $('iframe').attr('src', '');
 
     });
 
     $('[data-form]').click(function () {
         $('.thank-you-form').show();
+    });
+    $('[data-form-sale]').click(function () {
+        $('.thank-you-form-sale').show();
     });
     $('[data-video]').click(function () {
         var res = $(this).attr('data-video');
