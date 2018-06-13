@@ -55,8 +55,8 @@ $(".slide-shoose .slider").eq(n).addClass("active-box");
     $('.active-box').slick({
         slidesToShow: 2,
         dots: true,
-        prevArrow:'<span class="next1"></span>',
-        nextArrow:'<span class="prev1"></span>',
+        prevArrow:'<span class="prev1"></span>',
+        nextArrow:'<span class="next1"></span>',
         responsive: [
             {
                 breakpoint: 1400,

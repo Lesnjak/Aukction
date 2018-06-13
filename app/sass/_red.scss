@@ -137,7 +137,8 @@ width: 180%;
               }
 
               .city-box {
-              max-width: 225px;
+              max-width: 170px;
+                font-size: 18px;
               }
         }
       }
@@ -214,7 +215,7 @@ width: 180%;
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  left: calc(50% - 25px);
+  left: calc(50% - 45px);
   z-index: 100;
 }
 .slick-slide {padding: 0 50px;}
